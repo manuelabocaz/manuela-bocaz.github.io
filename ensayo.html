@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My sister hates this <picture></picture> • Manuela Bocaz</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="single-project">
+    <div id="wrapper">
+        
+        <header id="masthead" class="site-header">
+            <h1 class="site-title"><a href="index.html">Manuela<br>Bocaz</a></h1>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">Menú</div>
+            
+            <nav id="primary-navigation" class="site-navigation">
+                <ul id="menu-main-menu" class="nav-menu">
+                    <li><a href="artwork.html">Artwork</a></li>
+                    <li><a href="editorial.html">Editorial</a></li>
+                    <li><a href="comercial.html">Comercial</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <footer id="colophon" class="site-footer">
+                <div class="divider"></div>
+                <div class="copyright">&copy; 2026 Manuela Bocaz.</div>
+            </footer>
+        </header>
+
+        <main id="main" class="site-main">
+
+            <div class="project-carousel">
+                
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-2.jpg" alt="Foto 1">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-1.jpg" alt="Foto 2">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-3.jpg" alt="Foto 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-4.jpg" alt="Foto 4">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-5.jpg" alt="Foto 5">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/lofficielalfredo-6.jpg" alt="Foto 5">
+                </div>
+
+            </div>
+
+        </main>
+        
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('primary-navigation').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+/* =========================================
+   1. RESET Y VARIABLES GLOBALES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden; /* 🔴 ESTA LÍNEA ELIMINA EL SCROLL HACIA ABAJO */
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+/* =========================================
+   2. TIPOGRAFÍA Y LOGO
+   ========================================= */
+.site-title {
+    white-space: nowrap; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-align: left; 
+    margin-bottom: 2rem;  
+}
+
+.site-logo {
+    max-width: 150px; 
+    height: auto;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+.nav-menu li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem; 
+    text-transform: none; 
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   ENLACE ACTIVO (Subrayado indicador de página)
+   ========================================= */
+.nav-menu li a.active {
+    text-decoration: underline !important;
+    text-underline-offset: 6px !important;     /* 🔴 Separa la línea del texto para que se vea limpio */
+    text-decoration-thickness: 1px !important; /* 🔴 Línea fina y elegante */
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+.copyright, .divider {
+    display: none; 
+}
+
+/* =========================================
+   3. ARQUITECTURA: SIDEBAR (Izquierda)
+   ========================================= */
+.site-header {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    background-color: #ffffff;
+    z-index: 100;
+    align-items: flex-start; 
+    padding-top: 50px;       
+    padding-left: 50px;      
+    padding-bottom: 40px;
+    padding-right: 20px;
+}
+
+.site-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+    margin-top: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    text-align: left; 
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem; 
+    text-align: left;
+}
+
+.social-menu {
+    margin-top: 10px;
+}
+
+.social-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; 
+    padding: 0;
+}
+
+.social-menu i {
+    font-size: 1.3rem; 
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* =========================================
+   4. ARQUITECTURA: CONTENIDO (Derecha)
+   ========================================= */
+.site-main {
+    position: absolute !important; 
+    top: 0 !important;             
+    left: 250px !important;        
+    height: 100vh !important;
+    width: calc(100vw - 250px) !important; 
+    margin: 0 !important;
+    padding: 50px 0 0 0 !important; /* 50px de aire arriba */
+    overflow-x: auto !important;
+    overflow-y: hidden !important; 
+    display: block !important;     
+    box-sizing: border-box !important;
+}
+
+/* =========================================
+   5. RESPONSIVE: MÓVIL (Celulares)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    body { overflow-y: auto !important; }
+
+    .site-header {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important; 
+        padding: 20px !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        z-index: 1000 !important;
+    }
+
+    .site-title {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        font-size: 0.9rem !important;
+        letter-spacing: 1px !important;
+        cursor: pointer !important;
+        padding: 10px !important;
+        border: 1px solid #000 !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .site-navigation {
+        display: none !important; 
+        width: 100% !important;
+    }
+
+    .site-navigation.active {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .nav-menu li, .nav-menu { text-align: center !important; }
+    .social-menu ul { justify-content: center !important; }
+
+    .site-main {
+        position: relative !important; 
+        top: 0 !important;
+        left: 0 !important; 
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 0 40px 0 !important;
+    }
+
+    .portfolio-grid, .project-carousel {
+        height: 60vh !important; 
+        padding: 0 20px !important; 
+        gap: 15px !important; 
+    }
+
+    .grid-item img, .carousel-item img,
+    .grid-item video, .carousel-item video {
+        height: 45vh !important; 
+        width: auto !important;
+        max-width: 85vw !important; 
+    }
+}
+
+/* =========================================
+   6 Y 8. TODOS LOS CARRUSELES UNIFICADOS (Galerías y Proyectos)
+   ========================================= */
+.portfolio-grid, 
+.project-carousel {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    height: calc(100vh - 50px) !important; 
+    width: max-content !important;
+    margin: 0 !important;
+    padding: 0 40px 0 0 !important; 
+    gap: 30px !important;           
+    align-items: flex-start !important; /* Pega todo arriba */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.portfolio-grid::-webkit-scrollbar,
+.project-carousel::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* La caja que contiene Foto/Video (+ Texto si lo hay) */
+.grid-item,
+.carousel-item {
+    display: flex !important;
+    flex-direction: column !important;  
+    align-items: center !important;     
+    justify-content: flex-start !important; /* Mantiene la alineación arriba */
+    height: calc(100vh - 50px) !important;  
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    text-decoration: none !important;
+}
+
+/* 🔴 LA MAGIA: Las Fotos y Videos tienen exactamente el mismo tamaño en ambos carruseles */
+.grid-item img, .grid-item video,
+.carousel-item img, .carousel-item video {
+    height: calc(100vh - 150px) !important; 
+    width: auto !important;        
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover !important;
+}
+
+.grid-item:hover { 
+    opacity: 0.7; 
+}
+
+/* Textos de Subcategorías (Se mantienen igual) */
+.project-info {
+    display: block !important;     
+    position: relative !important; 
+    text-align: center !important; 
+    margin-top: 15px !important;   
+    color: #000000 !important;     
+    text-shadow: none !important;  
+    pointer-events: auto !important;
+    width: 100% !important;
+}
+
+.project-info h3 {
+    font-size: 0.9rem !important;  
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.project-info p {
+    font-size: 0.8rem !important;
+    margin-top: 0 !important;
+    color: #666666 !important;     
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* =========================================
+   REGLA ESPECIAL PARA EL INDEX (Sin espacios y fotos al máximo)
+   ========================================= */
+.index-grid {
+    gap: 0 !important; 
+}
+
+/* 🔴 Le decimos a las fotos del index que ignoren el margen del texto y ocupen todo el alto */
+.index-grid .grid-item img,
+.index-grid .grid-item video {
+    height: calc(100vh - 50px) !important; 
+}

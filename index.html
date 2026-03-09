@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuela Bocaz • Portafolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body class="home-portfolio">
+    <div id="wrapper">
+        
+        <header id="masthead" class="site-header">
+            <h1 class="site-title">
+                <a href="index.html">Manuela Bocaz</a>
+            </h1>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">Menú</div>
+            
+            <nav id="primary-navigation" class="site-navigation">
+                <ul id="menu-main-menu" class="nav-menu">
+                    <li><a href="artwork.html">Artwork</a></li>
+                    <li><a href="editorial.html">Editorial</a></li>
+                    <li><a href="comercial.html">Comercial</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <footer id="colophon" class="site-footer">
+                <div class="divider"></div>
+                <div class="copyright">
+                    &copy; 2026 Manuela Bocaz.<br>
+                    Artist and Director.
+                </div>
+            </footer>
+        </header>
+
+        <main id="main" class="site-main">
+            
+            <div class="portfolio-grid index-grid">
+                
+                <div class="grid-item">
+                    <img src="img/gho-9.jpg" alt="Kuina 2">
+                </div>
+                
+                <div class="grid-item">
+                    <img src="img/En Construcción (12).jpg" alt="Otra Obra">
+                </div>
+
+                <div class="grid-item">
+                    <img src="img/theclinic-5.jpg" alt="Tercera Obra">
+                </div>
+
+                <div class="grid-item">
+                    <img src="img/kuina-7.jpeg" alt="Cuarta Obra">
+                </div>
+
+                <div class="grid-item">
+                    <img src="img/En Construcción (20).jpg" alt="Quinta Obra">
+                </div>
+
+            </div>
+        </main>
+
+    </div> <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('primary-navigation').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

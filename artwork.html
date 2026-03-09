@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork • Manuela Bocaz</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body class="category-portfolio">
+    <div id="wrapper">
+        
+        <header id="masthead" class="site-header">
+            <h1 class="site-title">
+                <a href="index.html">Manuela Bocaz</a>
+            </h1>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">Menú</div>
+            
+            <nav id="primary-navigation" class="site-navigation">
+                <ul id="menu-main-menu" class="nav-menu">
+                    <li><a href="artwork.html" class="active">Artwork</a></li>
+                    <li><a href="editorial.html">Editorial</a></li>
+                    <li><a href="comercial.html">Comercial</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <footer id="colophon" class="site-footer">
+                <div class="divider"></div>
+                <div class="copyright">
+                    &copy; 2026 Manuela Bocaz.<br>
+                    Artista y Directora.
+                </div>
+            </footer>
+        </header>
+
+        <main id="main" class="site-main">
+            
+            <div class="portfolio-grid">
+                
+                <a href="laformaperfectadecaminar.html" class="grid-item">
+                    <img src="img/lfpdc-3.jpg" alt="Portada Proyecto 1">
+                    <div class="project-info">
+                        <h3>la forma perfecta de caminar</h3>
+                        <p>2024</p>
+                    </div>
+                </a>
+
+                <a href="caminamosmirandoalcielo.html" class="grid-item">
+                    <img src="img/cmac-1.jpg" alt="Portada Proyecto 2">
+                    <div class="project-info">
+                        <h3>Caminamos mirando al cielo</h3>
+                        <p>2024</p>
+                    </div>
+                </a>
+
+                <a href="enconstruccion.html" class="grid-item">
+                    <img src="img/En Construcción (12).jpg" alt="Portada Proyecto 3">
+                    <div class="project-info">
+                        <h3>En construcción</h3>
+                        <p>2023</p>
+                    </div>
+                </a>
+                
+            </div>
+            
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('primary-navigation').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
