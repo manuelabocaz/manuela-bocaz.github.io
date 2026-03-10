@@ -17,7 +17,7 @@
             
             <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             
-            <nav id="primary-navigation" class="site-navigation">
+            <nav id="primary-navigation" class="site-navigation"><div class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></div>
                 <ul id="menu-main-menu" class="nav-menu">
                     <li><a href="artwork">Artwork</a></li>
                     <li><a href="editorial">Editorial</a></li>
@@ -94,6 +94,6 @@
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('primary-navigation').classList.toggle('active');
         });
-    document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); </script>
+    document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); </script>ve'); }); </script>
 </body>
 </html>
