@@ -87,46 +87,16 @@ a:hover { opacity: 0.5; }
 @media screen and (max-width: 768px) {
     body { overflow-y: auto !important; overflow-x: hidden !important; }
 
-    /* Menú Superior Móvil */
-    .site-header { width: 100%; position: relative; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-    .site-title { text-align: center; margin-bottom: 15px; }
-    .menu-toggle {
-        display: block; width: 100%; padding: 10px; margin-bottom: 10px;
-        border: 1px solid #000; text-align: center; text-transform: uppercase;
-        letter-spacing: 1px; cursor: pointer;
-    }
-    .site-navigation { display: none; width: 100%; }
-    .site-navigation.active { display: flex; flex-direction: column; align-items: center; padding: 15px 0; }
-    .nav-menu { text-align: center; }
-    .nav-menu li { text-align: center; }
-
-    .site-main { width: 100%; padding: 0; position: relative; }
-
-    /* Carruseles Móvil (Verticales) */
-    .portfolio-grid, .project-carousel, .index-grid {
-        display: flex !important; flex-direction: column !important;
-        width: 100% !important; height: auto !important;
-        padding: 0 !important; margin: 0 !important;
-        gap: 60px !important; align-items: center !important;
-    }
-
-    .grid-item, .carousel-item {
-        width: 100vw !important; height: auto !important;
-        margin: 0 !important; padding: 0 !important;
-        display: flex !important; flex-direction: column !important; text-decoration: none;
-    }
-
-    /* Imágenes y Videos Borde a Borde Móvil */
-    .grid-item img, .carousel-item img, .index-grid .grid-item img,
-    .grid-item video, .carousel-item video, .index-grid .grid-item video {
-        width: 100vw !important; max-width: 100% !important;
-        height: auto !important; object-fit: cover !important;
-        display: block !important; margin: 0 !important;
-    }
-
-    /* Textos alineados a la izquierda en Móvil */
-    .project-info { width: 90% !important; margin: 15px auto 0 auto !important; text-align: left !important; }
-
-    /* Página Contacto Móvil */
-    .info-page .text-content { margin-top: 30px; margin-left: 20px; margin-right: 20px; text-align: left; }
-}
+    /* 🔴 BARRA SUPERIOR FIJA (Título a la Izq, Hamburguesa a la Der) */
+    .site-header { 
+        width: 100% !important; 
+        position: fixed !important; /* Se queda pegada arriba al hacer scroll */
+        top: 0;
+        left: 0;
+        padding: 15px 20px !important; 
+        display: flex !important; 
+        flex-direction: row !important; /* Elementos en la misma línea */
+        justify-content: space-between !important; /* Uno a cada extremo */
+        align-items: center !important; 
+        background-color: #ffffff; /* Fondo blanco para la barra */
+        z-index: 2000 !
