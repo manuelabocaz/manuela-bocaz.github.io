@@ -328,3 +328,21 @@ a:hover {
         margin-right: 20px;
     }
 }
+
+
+/* style.css - Ajuste para la página de Contacto */
+
+.info-page .text-content {
+    margin-top: 80px;     /* Lo despega del techo */
+    margin-left: 50px;    /* Lo despega del menú de la izquierda */
+    max-width: 600px;     /* Hace que las líneas de texto no sean infinitas */
+}
+
+/* Ajuste específico para que no se pegue en el celular */
+@media (max-width: 768px) {
+    .info-page .text-content {
+        margin-top: 100px;  /* Lo despega del menú que cae desde arriba */
+        margin-left: 20px;  /* Márgenes a los lados */
+        margin-right: 20px;
+    }
+}
