@@ -87,16 +87,6 @@ a:hover { opacity: 0.5; }
 @media screen and (max-width: 768px) {
     body { overflow-y: auto !important; overflow-x: hidden !important; }
 
-    /* 🔴 BARRA SUPERIOR FIJA (Título a la Izq, Hamburguesa a la Der) */
+    /* 🔴 BARRA SUPERIOR FIJA */
     .site-header { 
-        width: 100% !important; 
-        position: fixed !important; /* Se queda pegada arriba al hacer scroll */
-        top: 0;
-        left: 0;
-        padding: 15px 20px !important; 
-        display: flex !important; 
-        flex-direction: row !important; /* Elementos en la misma línea */
-        justify-content: space-between !important; /* Uno a cada extremo */
-        align-items: center !important; 
-        background-color: #ffffff; /* Fondo blanco para la barra */
-        z-index: 2000 !
+        width: 1
