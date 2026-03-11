@@ -211,3 +211,19 @@ a:hover { opacity: 0.5; }
     /* Página Contacto Móvil */
     .info-page .text-content { margin-top: 30px; margin-left: 20px; margin-right: 20px; text-align: left; }
 }
+
+/* --- CABEZAL BLANCO SÓLIDO Y FIJO --- */
+.site-header {
+    position: fixed !important; 
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #FFFFFF !important; /* Barra blanca sólida para fundir el PNG */
+    box-sizing: border-box !important;
+    z-index: 9999 !important; /* Asegura que la barra esté siempre por encima de las fotos */
+}
+
+/* Empuja las fotos hacia abajo para que la barra blanca no tape la primera imagen al entrar */
+.site-main {
+    padding-top: 120px !important; 
+}
