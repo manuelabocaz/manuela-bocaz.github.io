@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre del Proyecto • [Nombre del Artista]</title>
+    <title>Chanel Beauty • Manuela Bocaz</title>
     
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,11 +13,21 @@
     <div id="wrapper">
         
         <header id="masthead" class="site-header">
-            <h1 class="site-title"><a href="index.html">[Nombre del Artista]</a></h1>
+            <h1 class="site-title">
+                <a href="index.html">
+                    <img src="logo.png" alt="Manuela Bocaz" class="site-logo">
+                </a>
+            </h1>
             
-            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
             
-           <nav id="primary-navigation" class="site-navigation"><div class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></div>
+            <nav id="primary-navigation" class="site-navigation">
+                <div class="close-menu-btn" id="close-menu-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                
                 <ul id="menu-main-menu" class="nav-menu">
                     <li><a href="artwork">Artwork</a></li>
                     <li><a href="editorial">Editorial</a></li>
@@ -39,29 +49,36 @@
             </footer>
         </header>
 
-           <main id="main" class="site-main">
-
+        <main id="main" class="site-main">
             <div class="project-carousel">
                 
-                    <div class="carousel-item">
-    <video controls loop playsinline style="width: 100%;">
-        <source src="video/chanelbeauty.mp4" type="video/mp4">
-        Tu navegador no soporta videos.
-    </video>
-    
-    <div class="project-info">
-        <h3>Chanel Beauty</h3>
-        <p>Dirección / 2023</p>
-    </div>
-</div>
+                <div class="carousel-item">
+                    <video controls loop playsinline style="width: 100%;">
+                        <source src="video/chanelbeauty.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    
+                    <div class="project-info">
+                        <h3>Chanel Beauty</h3>
+                        <p>Dirección / 2023</p>
+                    </div>
+                </div>
+
+            </div>
         </main>
         
     </div>
 
     <script>
+        // Abrir menú con la hamburguesa
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('primary-navigation').classList.toggle('active');
+            document.getElementById('primary-navigation').classList.add('active');
         });
-    document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); </script>ve'); }); </script>
+
+        // Cerrar menú con la X
+        document.getElementById('close-menu-btn').addEventListener('click', function() { 
+            document.getElementById('primary-navigation').classList.remove('active'); 
+        });
+    </script>
 </body>
 </html>
