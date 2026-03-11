@@ -14,11 +14,16 @@
     <div id="wrapper">
         
         <header id="masthead" class="site-header">
-            <h1 class="site-title"><a href="index.html"><img src="logo.png" alt="Manuela Bocaz" class="site-logo"></a></h1>
+            <h1 class="site-title">
+                <a href="index.html">
+                    <img src="logo.png" alt="Manuela Bocaz" class="site-logo">
+                </a>
+            </h1>
             
             <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             
-           <nav id="primary-navigation" class="site-navigation"><div class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></div>
+            <nav id="primary-navigation" class="site-navigation">
+                <div class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></div>
                 <ul id="menu-main-menu" class="nav-menu">
                     <li><a href="artwork">Artwork</a></li>
                     <li><a href="editorial">Editorial</a></li>
@@ -144,16 +149,17 @@
                     </div>
                 </a>
 
-               
-
             </div>
         </main>
     </div>
 
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('primary-navigation').classList.toggle('active');
+            document.getElementById('primary-navigation').classList.add('active');
         });
-    document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); document.getElementById('close-menu-btn').addEventListener('click', function() { document.getElementById('primary-navigation').classList.remove('active'); }); </script>ve'); }); </script>
+        document.getElementById('close-menu-btn').addEventListener('click', function() { 
+            document.getElementById('primary-navigation').classList.remove('active'); 
+        }); 
+    </script>
 </body>
 </html>
